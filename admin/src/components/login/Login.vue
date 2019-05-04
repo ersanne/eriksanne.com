@@ -34,20 +34,20 @@
 </template>
 
 <script>
-  export default {
-    name: 'SignInForm',
-    data: function () {
-      return {
-        user: '',
-        password: ''
-      }
-    },
-    methods: {
-      login: function () {
-        // TODO: Do login
-      }
+export default {
+  name: 'SignInForm',
+  data: function () {
+    return {
+      user: '',
+      password: ''
+    }
+  },
+  methods: {
+    login: function () {
+      // TODO: Do login
     }
   }
+}
 </script>
 
 <style scoped>

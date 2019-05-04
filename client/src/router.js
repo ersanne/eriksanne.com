@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import Login from './views/Login.vue'
+import Login from '../../admin/src/views/Login.vue'
 import NotFound from './views/NotFound'
 import Portfolio from './components/front-page/Portfolio'
 import Blog from './components/blog/Blog'
@@ -21,28 +21,31 @@ const router = new Router({
       name: 'home',
       component: Home
     },
-    // {
-    //   path: '/about-me',
-    //   name: 'about-me',
-    //   // route level code-splitting
-    //   // this generates a separate chunk (about.[hash].js) for this route
-    //   // which is lazy-loaded when the route is visited.
-    //   component: () => import(/* webpackChunkName: "about" */ './views/AboutMe.vue')
-    // },
     {
       path: '/login',
       name: 'login',
-      component: Login
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "login" */ '../../admin/src/views/Login.vue')
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "admin" */ './views/Dashboard.vue')
     },
     {
       path: '/wip/portfolio',
       name: 'portfolio',
-      component: Portfolio
+      component: () => import(/* webpackChunkName: "portfolio" */ './components/front-page/Portfolio.vue')
     },
     {
       path: '/wip/blog',
       name: 'blog',
-      component: Blog
+      component: () => import(/* webpackChunkName: "blog" */ './components/blog/Blog.vue')
     }
   ]
 })
