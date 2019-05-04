@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Login from './views/Login.vue'
 import NotFound from './views/NotFound'
+import Portfolio from './components/front-page/Portfolio'
+import Blog from './components/blog/Blog'
 
 Vue.use(Router)
 
@@ -31,6 +33,16 @@ const router = new Router({
       path: '/login',
       name: 'login',
       component: Login
+    },
+    {
+      path: '/wip/portfolio',
+      name: 'portfolio',
+      component: Portfolio
+    },
+    {
+      path: '/wip/blog',
+      name: 'blog',
+      component: Blog
     }
   ]
 })

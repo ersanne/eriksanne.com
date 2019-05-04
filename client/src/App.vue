@@ -18,7 +18,12 @@
                 </v-toolbar-side-icon>
             </span>
       <v-toolbar-title class="headline text-uppercase">
-        <router-link to="/" tag="span" style="cursor: pointer">{{ appTitle }}</router-link>
+        <a
+          href="/"
+          :class="$style.title"
+          @click.stop.prevent="$vuetify.goTo(0)">
+          {{ appTitle }}
+        </a>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
@@ -88,7 +93,9 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" module>
+.title
+  text-decoration: none
 #app
   background: #fff
   .container
