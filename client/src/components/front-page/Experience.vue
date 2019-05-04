@@ -48,7 +48,7 @@ export default {
             '<li>Worked with Java 7/8, Spring and Spring Boot, TypeScript with Angular 6, Python 2.7, ' +
             'Perl, SQL for DB2 and Sybase, Ant-build and Gradle</li></ul>' },
         { title: 'Product Specialist - Online Fraud Prevention',
-          company: 'Sykes Global Services Ltd',
+          company: 'Sykes Global Services',
           location: 'Edinburgh, UK',
           date: 'May 2017 - May 2018',
           text: '' +

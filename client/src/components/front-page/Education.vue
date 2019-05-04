@@ -16,12 +16,14 @@
             ></span>
             <div class="py-4">
               <h2
-                :class="`title font-weight-regular ${item.color}--text text--${item.dark} pb-2`"
+                :class="`title font-weight-regular ${item.color}--text text--${item.dark} pb-1`"
                 v-text="item.title"
               ></h2>
-              <h3 :class="`font-weight-regular ${item.color}--text text--${item.dark} pb-2`"
-                    v-text="`${item.grade}`">
-              </h3>
+              <span
+                :class="`font-weight-regular ${item.color}--text text--${item.dark} pb-3`"
+                v-text="item.grade">
+              </span>
+              <br>
               <span :class="`font-weight-regular ${item.color}--text text--${item.dark} pb-2`"
                     v-text="`${item.institution}, ${item.location}`">
               </span>
@@ -47,7 +49,7 @@ export default {
         dark: 'darken-1',
         date: '2016 - 2020',
         title: 'BEng (Hons) Software Engineering',
-        grade: 'Predicted First-class',
+        grade: 'First-Class (Predicted)',
         institution: 'Edinburgh Napier University',
         location: 'Edinburgh, UK',
         text: 'A wide variety of modules covering the analysis, design, development, testing, evaluation and' +

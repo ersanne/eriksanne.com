@@ -1,4 +1,4 @@
-export function getDocumentHeight() {
+export function getDocumentHeight () {
   return Math.max(
     document.body.scrollHeight,
     document.documentElement.scrollHeight,
@@ -9,7 +9,7 @@ export function getDocumentHeight() {
   )
 }
 
-export function getWindowHeight() {
+export function getWindowHeight () {
   return window.innerHeight ||
     (document.documentElement || document.body).clientHeight
 }

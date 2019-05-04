@@ -17,8 +17,16 @@ export default new Vuex.Store({
         text: 'Skills'
       },
       {
-        id: 'Experience',
-        text: 'experience'
+        id: 'languages',
+        text: 'Languages'
+      },
+      {
+        id: 'experience',
+        text: 'Experience'
+      },
+      {
+        id: 'education',
+        text: 'Education'
       },
       {
         id: 'portfolio',

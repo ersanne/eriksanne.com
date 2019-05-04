@@ -13,7 +13,7 @@
     </v-navigation-drawer>
 
     <v-toolbar app color="white">
-            <span class="hidden-sm-and-up">
+            <span class="hidden-md-and-up">
                 <v-toolbar-side-icon v-on:click="sidebar = !sidebar">
                 </v-toolbar-side-icon>
             </span>
@@ -21,7 +21,7 @@
         <router-link to="/" tag="span" style="cursor: pointer">{{ appTitle }}</router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-items class="hidden-xs-only">
+      <v-toolbar-items class="hidden-sm-and-down">
         <v-btn
           flat
           v-for="item in menuItems"
@@ -49,9 +49,17 @@
 </template>
 // @ is an alias to /src
 <script>
+
+import { mapState } from 'vuex'
+import scrollSpyMixin from './scrollSpyMixin'
+import goTo from 'vuetify/es5/components/Vuetify/util/goTo'
+
 export default {
   name: 'App',
-  components: {},
+  computed: mapState([
+    'links',
+    'activeIndex'
+  ]),
   data () {
     return {
       appTitle: 'Erik Sanne',
@@ -65,9 +73,16 @@ export default {
       ]
     }
   },
-  methods: {
-    sendHome: function () {
-      this.$router.push('/')
+  mixins: [scrollSpyMixin],
+  created () {
+    const hash = this.$route.hash
+    if (hash) {
+      this.$store.commit('activeIndex', hash.substr(1))
+      this.$nextTick(() => {
+        // Code that will run only after the
+        // entire view has been rendered
+        goTo(hash)
+      })
     }
   }
 }
