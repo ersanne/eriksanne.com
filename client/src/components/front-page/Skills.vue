@@ -1,14 +1,93 @@
 <template>
-  <v-container>
-    <h2 class="headline text-xs-center py-5 font-weight-bold text-uppercase grey--text text--darken-3">Skills</h2>
-    <v-divider></v-divider>
-  </v-container>
+  <section-layout id="skills" title="Skills">
+    <v-layout wrap>
+      <v-flex xs12 sm6 class="px-4" v-for="(groups, i) in items" :key="i">
+        <div v-for="item in groups" :key="item.text" class="mb-4">
+          <v-layout align-center fill-height>
+            <v-icon :color="item.color" v-text="`${item.icon}`" class="mr-2"></v-icon>
+            <div class="subheading blue-grey--text text--darken-3" v-text="item.text"></div>
+          </v-layout>
+          <v-progress-linear class="my-1" readonly height="8" :value="item.value" :color="item.color"></v-progress-linear>
+        </div>
+      </v-flex>
+    </v-layout>
+  </section-layout>
 </template>
 
 <script>
-  export default {
-    name: 'Skills'
-  }
+import SectionLayout from '../../views/SectionLayout'
+export default {
+  name: 'Skills',
+  components: { SectionLayout },
+  data: () => ({
+    items: [
+      [
+        {
+          icon: 'icon-java',
+          text: 'Java',
+          value: 85,
+          color: 'red'
+        },
+        {
+          icon: 'icon-spring',
+          text: 'Spring Framework',
+          value: 75,
+          color: 'green'
+        },
+        {
+          icon: 'mdi-language-csharp',
+          text: 'C#',
+          value: 65,
+          color: 'purple darken-2'
+        },
+        {
+          icon: 'mdi-language-python',
+          text: 'Python',
+          value: 45,
+          color: 'light-blue darken-2'
+        },
+        {
+          icon: 'mdi-docker',
+          text: 'Docker',
+          value: 40,
+          color: 'blue lighten-2'
+        }
+      ],
+      [
+        {
+          icon: 'fa-database',
+          text: 'SQL',
+          value: 70,
+          color: 'black'
+        },
+        {
+          icon: 'fa-vector-square',
+          text: 'UML',
+          value: 35,
+          color: 'blue darken-2'
+        },
+        {
+          icon: 'mdi-language-javascript',
+          text: 'JavaScript',
+          value: 60,
+          color: 'yellow darken-2'
+        },
+        {
+          icon: 'mdi-vuejs',
+          text: 'VueJS',
+          value: 47,
+          color: 'green lighten-1'
+        },
+        {
+          icon: 'mdi-angular',
+          text: 'Angular',
+          value: 30,
+          color: 'red darken-1'
+        }
+      ]
+    ]
+  })
+}
 </script>
 
 <style scoped>

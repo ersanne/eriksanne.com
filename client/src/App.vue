@@ -5,17 +5,14 @@
         <v-list-tile
           v-for="item in menuItems"
           :key="item.title"
-          :to="item.path"
+          v-on:click="$vuetify.goTo(item.id)"
         >
-          <v-list-tile-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-tile-action>
           <v-list-tile-content>{{ item.title }}</v-list-tile-content>
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
 
-    <v-toolbar app>
+    <v-toolbar app color="white">
             <span class="hidden-sm-and-up">
                 <v-toolbar-side-icon v-on:click="sidebar = !sidebar">
                 </v-toolbar-side-icon>
@@ -26,11 +23,10 @@
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only">
         <v-btn
-          v-on:click="$vuetify.goTo(item.id)"
           flat
           v-for="item in menuItems"
           :key="item.title"
-          :to="item.path">
+          v-on:click="$vuetify.goTo(item.id)">
           {{ item.title }}
         </v-btn>
       </v-toolbar-items>
@@ -53,30 +49,33 @@
 </template>
 // @ is an alias to /src
 <script>
-  export default {
-    name: 'App',
-    components: {},
-    data () {
-      return {
-        appTitle: 'Erik Sanne',
-        sidebar: false,
-        menuItems: [
-          {title: 'About Me', id: '#about-me'},
-          {title: 'Skills', id: '#skills'},
-          {title: 'Experience', id: '#experience'},
-          {title: 'Portfolio', id: '#portfolio'},
-          {title: 'Contact Me', id: '#contact'}
-        ]
-      }
-    },
-    methods: {
-      sendHome: function () {
-        this.$router.push('/')
-      }
+export default {
+  name: 'App',
+  components: {},
+  data () {
+    return {
+      appTitle: 'Erik Sanne',
+      sidebar: false,
+      menuItems: [
+        { title: 'About Me', id: '#about-me' },
+        { title: 'Skills', id: '#skills' },
+        { title: 'Experience', id: '#experience' },
+        { title: 'Portfolio', id: '#portfolio' },
+        { title: 'Contact Me', id: '#contact' }
+      ]
+    }
+  },
+  methods: {
+    sendHome: function () {
+      this.$router.push('/')
     }
   }
+}
 </script>
 
-<style>
-
+<style lang="stylus">
+#app
+  background: #fff
+  .container
+    max-width: 1170px
 </style>

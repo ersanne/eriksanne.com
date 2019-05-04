@@ -1,7 +1,5 @@
 <template>
-    <v-container>
-        <h2 class="headline text-xs-center py-5 font-weight-bold text-uppercase grey--text text--darken-3">Contact Me</h2>
-        <v-divider></v-divider>
+    <section-layout id="contact" title="Contact">
         <div class="text-xs-center pb-4">
             <v-btn
                     v-for="item in items"
@@ -22,32 +20,34 @@
             <v-icon>email</v-icon>
             <span class="title font-weight-light grey--text text--darken-3"> erik@eriksanne.com</span>
         </v-layout>
-    </v-container>
+    </section-layout>
 </template>
 
 <script>
-  export default {
-    data: () => ({
-      items: [
-        {
-          label: 'GitHub',
-          icon: 'github-circle',
-          link: 'https://github.com/',
-          color: '#333'
-        },
-        {
-          label: 'LinkedIn',
-          icon: 'linkedin',
-          link: 'https://www.linkedin.com/in/',
-          color: '#0077b5'
-        },
-        {
-          label: 'Twitter',
-          icon: 'twitter',
-          link: 'https://www.twitter.com/',
-          color: '#38a1f3'
-        }
-      ]
-    })
-  }
+import SectionLayout from '../../views/SectionLayout';
+export default {
+  components: { SectionLayout },
+  data: () => ({
+    items: [
+      {
+        label: 'GitHub',
+        icon: 'github-circle',
+        link: 'https://github.com/',
+        color: '#333'
+      },
+      {
+        label: 'LinkedIn',
+        icon: 'linkedin',
+        link: 'https://www.linkedin.com/in/',
+        color: '#0077b5'
+      },
+      {
+        label: 'Twitter',
+        icon: 'twitter',
+        link: 'https://www.twitter.com/',
+        color: '#38a1f3'
+      }
+    ]
+  })
+}
 </script>

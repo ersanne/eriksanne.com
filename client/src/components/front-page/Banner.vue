@@ -1,6 +1,6 @@
 <template>
     <v-parallax
-            src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
+            src="https://i.imgur.com/dDkJ5hJ.jpg"
     >
         <v-layout
                 align-center
@@ -14,11 +14,14 @@
 </template>
 
 <script>
-  export default {
-    name: 'Banner'
-  }
+export default {
+  name: 'Banner'
+}
 </script>
 
 <style scoped>
-
+  .v-parallax__image {
+    transform: none !important;
+    width: 100% !important;
+  }
 </style>

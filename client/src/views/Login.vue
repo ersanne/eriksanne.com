@@ -3,12 +3,12 @@
 </template>
 
 <script>
-  import SignInForm from '../components/login/SignInForm'
+import SignInForm from '../components/login/SignInForm'
 
-  export default {
-    name: 'Login',
-    components: {SignInForm}
-  }
+export default {
+  name: 'Login',
+  components: { SignInForm }
+}
 </script>
 
 <style scoped>

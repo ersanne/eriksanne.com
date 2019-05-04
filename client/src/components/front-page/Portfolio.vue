@@ -1,8 +1,5 @@
 <template>
-  <v-container>
-    <h2 class="headline text-xs-center py-5 font-weight-bold text-uppercase grey--text text--darken-3">
-      Portfolio</h2>
-    <v-divider></v-divider>
+  <section-layout id="portfolio" title="Portfolio">
     <v-container
       fluid
       grid-list-md
@@ -34,10 +31,7 @@
             <v-card-actions>
               <v-spacer></v-spacer>
               <v-btn icon>
-                <v-icon>favorite</v-icon>
-              </v-btn>
-              <v-btn icon>
-                <v-icon>bookmark</v-icon>
+                <v-icon>mdi-github-circle</v-icon>
               </v-btn>
               <v-btn icon>
                 <v-icon>share</v-icon>
@@ -47,12 +41,14 @@
         </v-flex>
       </v-layout>
     </v-container>
-  </v-container>
+  </section-layout>
 </template>
 
 <script>
+  import SectionLayout from "../../views/SectionLayout";
   export default {
     name: 'Portfolio',
+    components: {SectionLayout},
     data: () => ({
       cards: [
         {title: 'Pre-fab homes', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 12},
