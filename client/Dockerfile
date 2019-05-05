@@ -1,6 +1,6 @@
 FROM node:10
-COPY ./ /app/client
-WORKDIR /app/client
+COPY ./ /app
+WORKDIR /app
 RUN npm install && npm run build
 
 FROM nginx
