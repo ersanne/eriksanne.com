@@ -32,19 +32,19 @@ export default {
       {
         label: 'GitHub',
         icon: 'github-circle',
-        link: 'https://github.com/',
+        link: 'https://github.com/ersanne',
         color: '#333'
       },
       {
         label: 'LinkedIn',
         icon: 'linkedin',
-        link: 'https://www.linkedin.com/in/',
+        link: 'https://www.linkedin.com/in/eriksanne/',
         color: '#0077b5'
       },
       {
         label: 'Twitter',
         icon: 'twitter',
-        link: 'https://www.twitter.com/',
+        link: 'https://twitter.com/ErikKonradSanne',
         color: '#38a1f3'
       }
     ]

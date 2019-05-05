@@ -1,13 +1,15 @@
 <template>
-  <SignInForm></SignInForm>
+  <div>
+    <LoginForm/>
+  </div>
 </template>
 
 <script>
-import SignInForm from '../components/login/Login'
+import LoginForm from '../components/login/LoginForm'
 
 export default {
   name: 'Login',
-  components: { SignInForm }
+  components: { LoginForm }
 }
 </script>
 

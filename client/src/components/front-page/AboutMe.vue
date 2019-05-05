@@ -1,15 +1,23 @@
 <template>
     <section-layout id="about-me" title="About Me">
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum."</p>
+      <div class="subheading blue-grey--text text--darken-3">
+        <p>
+          I am a junior software engineer currently studying towards a first-class BEng (Hons) Software
+          Engineering degree at Edinburgh Napier University. I am passionate about financial services
+          and aspiring to drive change in this sector through fintech. As part of my third year at
+          University I had the opportunity to undertake a 12 month industrial placement at Morgan Stanley
+          where I worked on a market leading event-driven equity swaps trading system and developed enterprise
+          tools for developers in the company. This allowed me to elevate both my technical and professional skills.
+        <p>
+          My professional experience includes enterprise Java systems, database development on DB2 and Sybase, full
+          stack development with Angular 6, Python and Java, API development and performance tuning.
+        </p>
+      </div>
     </section-layout>
 </template>
 
 <script>
-import SectionLayout from '../../views/SectionLayout';
+import SectionLayout from '../../views/SectionLayout'
 export default {
   name: 'Summary',
   components: { SectionLayout }

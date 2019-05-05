@@ -9,16 +9,8 @@ export default new Vuex.Store({
     drawer: false,
     links: [
       {
-        id: 'about-me',
-        text: 'About Me'
-      },
-      {
         id: 'skills',
         text: 'Skills'
-      },
-      {
-        id: 'languages',
-        text: 'Languages'
       },
       {
         id: 'experience',
@@ -29,12 +21,8 @@ export default new Vuex.Store({
         text: 'Education'
       },
       {
-        id: 'portfolio',
-        text: 'Portfolio'
-      },
-      {
         id: 'contact',
-        text: 'Contact Me'
+        text: 'Contact'
       }
     ]
   },

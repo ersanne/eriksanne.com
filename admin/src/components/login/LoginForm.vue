@@ -20,11 +20,16 @@
                   </v-form>
                 </v-card-text>
                 <v-card-actions>
-                  <v-spacer></v-spacer>
-                  <v-btn color="primary" v-on:click="login">Login</v-btn>
+                  <v-spacer/>
+                  <v-btn
+                    color="primary"
+                    @click="login">
+                    Login</v-btn>
                 </v-card-actions>
               </v-card>
-              <div class="g-signin2" data-onsuccess="onSignIn"></div>
+              <div
+                class="g-signin2"
+                data-onsuccess="onSignIn"></div>
             </v-flex>
           </v-layout>
         </v-container>

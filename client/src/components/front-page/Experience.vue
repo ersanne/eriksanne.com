@@ -42,11 +42,12 @@ export default {
           location: 'Glasgow, UK',
           date: 'Jun 2018 - May 2019',
           text: '12 months split between Equity Swaps Trading and MSDE (Morgan Stanley Developer Environment).' +
-            '<ul><li>Performance tuning</li>' +
-            '<li>Software migration</li>' +
-            '<li>Full stack software development</li>' +
+            '<ul><li>Performance tuned a market leading equity swaps trading system</li>' +
+            '<li>Mirgrated and enhanced a client feature from Perl scripts to a  new Java 8' +
+            ' Spring boot application</li>' +
+            '<li>Full stack software development with Angular 6, Python 2.7 and Java 8</li>' +
             '<li>Worked with Java 7/8, Spring and Spring Boot, TypeScript with Angular 6, Python 2.7, ' +
-            'Perl, SQL for DB2 and Sybase, Ant-build and Gradle</li></ul>' },
+            'Perl, Bash, SQL for DB2 and Sybase, Ant-build and Gradle</li></ul>' },
         { title: 'Product Specialist - Online Fraud Prevention',
           company: 'Sykes Global Services',
           location: 'Edinburgh, UK',

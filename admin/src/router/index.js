@@ -29,6 +29,7 @@ Vue.use(Router)
 
 // Create a new router
 const router = new Router({
+  base: '/admin',
   mode: 'history',
   routes: paths.map(path => route(path.path, path.view, path.name)).concat([
     { path: '*', redirect: '/dashboard' }
@@ -42,6 +43,19 @@ const router = new Router({
     }
     return { x: 0, y: 0 }
   }
+})
+
+router.beforeEach((to, from, next) => {
+  // redirect to login page if not logged in and trying to access a restricted page
+  const restrictedPages = ['']
+  const authRequired = restrictedPages.includes(to.path)
+  const loggedIn = localStorage.getItem('user')
+
+  if (authRequired && !loggedIn) {
+    return next('/login')
+  }
+
+  next()
 })
 
 Vue.use(Meta)
