@@ -47,8 +47,8 @@ services:
     volumes:
       - wwwvolume:/app
     environment:
-      -PORT=80
-      -NODE_ENV=production
+      - PORT=80
+      - NODE_ENV=production
 
   server:
     container_name: 'server'
