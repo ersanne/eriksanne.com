@@ -10,15 +10,32 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css">
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
 </head>
 <body>
-<script src="https://apis.google.com/js/platform.js"></script>
-<script type="text/javascript" src="//app.storyblok.com/f/storyblok-latest.js"></script>
-<meta name="google-signin-client_id" content="115407058780-pkok9j4b1v982lqe2vct3sfmm2j10mgp.apps.googleusercontent.com">
 <noscript>
   <strong>We're sorry but eriksanne.com doesn't work properly without JavaScript enabled. Please enable it to
     continue.</strong>
 </noscript>
+<script src="https://apis.google.com/js/platform.js"></script>
+<script type="text/javascript" src="//app.storyblok.com/f/storyblok-latest.js"></script>
+<meta name="google-signin-client_id" content="115407058780-pkok9j4b1v982lqe2vct3sfmm2j10mgp.apps.googleusercontent.com">
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#000"
+        },
+        "button": {
+          "background": "#f1d600"
+        }
+      },
+      "theme": "classic",
+      "position": "bottom-right"
+    })});
+</script>
 <div id="app"></div>
 <!-- built files will be auto injected -->
 </body>
