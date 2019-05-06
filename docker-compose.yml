@@ -24,7 +24,8 @@ services:
       - URL=eriksanne.com
       - SUBDOMAINS=www
       - TZ=Europe/London
-      - VALIDATION=http
+      - VALIDATION=dns
+      - DNSPLUGIN=cloudflare
       # - STAGING=true # this should be uncommented when testing for initial success, to avoid some rate limiting
 
   certbot:
