@@ -1,11 +1,11 @@
 import Vue from 'vue'
-import Router from 'vue-router'
+import VueRouter from 'vue-router'
 import Home from './views/Home.vue'
 import NotFound from './views/NotFound'
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
-const router = new Router({
+const router = new VueRouter({
   mode: 'history',
   routes: [
     {
@@ -29,19 +29,6 @@ const router = new Router({
       component: () => import(/* webpackChunkName: "blog" */ './components/blog/Blog.vue')
     }
   ]
-})
-
-router.beforeEach((to, from, next) => {
-  // redirect to login page if not logged in and trying to access a restricted page
-  const restrictedPages = ['/admin']
-  const authRequired = restrictedPages.includes(to.path)
-  const loggedIn = localStorage.getItem('user')
-
-  if (authRequired && !loggedIn) {
-    return next('/login')
-  }
-
-  next()
 })
 
 export default router
