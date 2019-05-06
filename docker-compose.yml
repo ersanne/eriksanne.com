@@ -1,22 +1,32 @@
-version: '3.1'
+version: '3.6'
 
 services:
   nginx:
-    image: nginx:1.15-alpine
-    restart: unless-stopped
-    networks:
-      - docker-network
-    volumes:
-      - ./.config/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./.config/certbot/conf:/etc/letsencrypt
-      - ./.config/certbot/www:/var/www/certbot
+    container_name: nginx
+    image: linuxserver/letsencrypt
+    restart: always
     ports:
       - "80:80"
       - "443:443"
-    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+    volumes:
+      - ./.config/letsencrypt:/config
+      - ./.config/nginx.conf:/config/nginx/site-confs/default
+      - ./.config/ssl.conf:/config/nginx/ssl.conf
     depends_on:
-      - client
-      - admin
+      - portfolio-website
+      - admin-dashboard
+    networks:
+      - frontend
+    environment:
+      - PUID=1001 # get on dockerhost through command "id <user>""
+      - PGID=1001
+      - EMAIL=erik@eriksanne.com
+      - URL=eriksanne.com
+      - SUBDOMAINS=www
+      - TZ=Europe/London
+      - VALIDATION=dns # using dns validation
+      - DNSPLUGIN=dnsimple # via dnsimple, note there is additional configuration require separate from this file
+      # - STAGING=true # this should be uncommented when testing for initial success, to avoid some rate limiting
 
   certbot:
     image: certbot/certbot
@@ -26,28 +36,27 @@ services:
       - ./.config/certbot/www:/var/www/certbot
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
 
-  client:
-    container_name: client
-    hostname: client
+  portfolio-website:
+    container_name: portfolio-website
     build: ./client
-    ports:
-      - "8080:80"
+    restart: always
+    expose:
+      - "8080"
     networks:
-      - docker-network
+      - frontend
     environment:
-      - PORT=80
+      - PORT=8080
       - NODE_ENV=production
 
-  admin:
-    container_name: admin
-    hostname: admin
+  admin-dashboard:
+    container_name: admin-dashboard
     build: ./admin
-    ports:
-      - "8081:80"
+    expose:
+      - "8081"
     networks:
-      - docker-network
+      - frontend
     environment:
-      - PORT=80
+      - PORT=8081
       - NODE_ENV=production
 
   server:
@@ -88,5 +97,4 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: example
 
 networks:
-  docker-network:
-    driver: bridge
+  frontend:
