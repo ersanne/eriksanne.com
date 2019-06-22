@@ -11,7 +11,7 @@
         </div>
       </v-flex>
       <v-container fluid>
-        <v-layout row>
+        <v-layout row wrap>
           <v-flex pa-1 shrink v-for="item in bullet_items" :key="item.text" class="mb-4">
             <v-card :color="item.color" dark>
               <v-card-text class="subheading" v-text="item.text"></v-card-text>

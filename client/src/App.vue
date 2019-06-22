@@ -13,7 +13,7 @@
 
 import { mapState } from 'vuex'
 import scrollSpyMixin from './scrollSpyMixin'
-import goTo from 'vuetify/es5/components/Vuetify/util/goTo'
+import goTo from 'vuetify/es5/components/Vuetify/goTo'
 import NavigationDrawer from './components/NavigationDrawer'
 import Toolbar from './components/Toolbar'
 import Footer from './components/Footer'
