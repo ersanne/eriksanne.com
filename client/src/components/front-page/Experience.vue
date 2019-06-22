@@ -37,17 +37,21 @@ export default {
   data () {
     return {
       items: [
+        { title: 'Business Anlyst Intern',
+          company: 'MarketAxess',
+          location: 'London, UK',
+          date: 'Jun 2019 - Aug 2019',
+          text: 'Produced high level and detailed business specifications. ' +
+                  'Gained a detailed understanding of the MarketAxess trading platform. ' +
+                  'Participated in Scrum as a product owner and prioritized work items for developers. ' },
         { title: 'Technology Anayst - Industrial Placement',
           company: 'Morgan Stanley',
           location: 'Glasgow, UK',
           date: 'Jun 2018 - May 2019',
-          text: '12 months split between Equity Swaps Trading and MSDE (Morgan Stanley Developer Environment).' +
-            '<ul><li>Performance tuned a market leading equity swaps trading system</li>' +
-            '<li>Mirgrated and enhanced a client feature from Perl scripts to a  new Java 8' +
-            ' Spring boot application</li>' +
-            '<li>Full stack software development with Angular 6, Python 2.7 and Java 8</li>' +
-            '<li>Worked with Java 7/8, Spring and Spring Boot, TypeScript with Angular 6, Python 2.7, ' +
-            'Perl, Bash, SQL for DB2 and Sybase, Ant-build and Gradle</li></ul>' },
+          text: '12 months split across Equity Swaps Trading and Morgan Stanley Developer Environment teams. ' +
+                  'Performance tuned Java and SQL components on a market leading trading system. ' +
+                  'Migrated and enhanced a client feature from Perl scripts to a Java Spring Boot application. ' +
+                  'Full stack software development with Java Spring Boot, Python and JS + Angular 6' },
         { title: 'Product Specialist - Online Fraud Prevention',
           company: 'Sykes Global Services',
           location: 'Edinburgh, UK',

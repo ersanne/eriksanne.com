@@ -29,7 +29,10 @@
         v-text="link.text">
       </v-btn>
     </v-toolbar-items>
-    <v-btn round color="primary">Download CV</v-btn>
+    <a href="/CV_ErikSanne.docx"
+       :class="$style.title">
+      <v-btn round color="primary">Download CV</v-btn>
+    </a>
   </v-toolbar>
 </template>
 

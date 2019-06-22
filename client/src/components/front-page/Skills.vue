@@ -1,7 +1,7 @@
 <template>
   <section-layout id="skills" title="Skills">
     <v-layout wrap>
-      <v-flex xs12 sm6 class="px-4" v-for="(groups, i) in items" :key="i">
+      <v-flex xs12 sm6 class="px-4" v-for="(groups, i) in bar_items" :key="i">
         <div v-for="item in groups" :key="item.text" class="mb-4">
           <v-layout align-center fill-height>
             <v-icon :color="item.color" v-text="`${item.icon}`" class="mr-2"></v-icon>
@@ -10,6 +10,15 @@
           <v-progress-linear class="my-1" readonly height="8" :value="item.value" :color="item.color"></v-progress-linear>
         </div>
       </v-flex>
+      <v-container fluid>
+        <v-layout row>
+          <v-flex pa-1 shrink v-for="item in bullet_items" :key="item.text" class="mb-4">
+            <v-card :color="item.color" dark>
+              <v-card-text class="subheading" v-text="item.text"></v-card-text>
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </v-container>
     </v-layout>
   </section-layout>
 </template>
@@ -20,36 +29,36 @@ export default {
   name: 'Skills',
   components: { SectionLayout },
   data: () => ({
-    items: [
+    bar_items: [
       [
         {
           icon: 'icon-java',
           text: 'Java',
-          value: 85,
+          value: 75,
           color: 'red'
         },
         {
           icon: 'icon-spring',
           text: 'Spring Framework',
-          value: 75,
+          value: 50,
           color: 'green'
         },
         {
           icon: 'mdi-language-csharp',
           text: 'C#',
-          value: 65,
+          value: 75,
           color: 'purple darken-2'
         },
         {
           icon: 'mdi-language-python',
           text: 'Python',
-          value: 45,
+          value: 50,
           color: 'light-blue darken-2'
         },
         {
           icon: 'mdi-docker',
           text: 'Docker',
-          value: 40,
+          value: 25,
           color: 'blue lighten-2'
         }
       ],
@@ -57,34 +66,52 @@ export default {
         {
           icon: 'fa-database',
           text: 'SQL',
-          value: 70,
+          value: 75,
           color: 'black'
         },
         {
           icon: 'fa-vector-square',
           text: 'UML',
-          value: 35,
+          value: 50,
           color: 'blue darken-2'
         },
         {
           icon: 'mdi-language-javascript',
           text: 'JavaScript',
-          value: 60,
+          value: 50,
           color: 'yellow darken-2'
         },
         {
           icon: 'mdi-vuejs',
           text: 'VueJS',
-          value: 47,
+          value: 50,
           color: 'green lighten-1'
         },
         {
           icon: 'mdi-angular',
           text: 'Angular',
-          value: 30,
+          value: 25,
           color: 'red darken-1'
         }
       ]
+    ],
+    bullet_items: [
+      {
+        text: 'Able to work independently or as part of a wider team',
+        color: 'blue'
+      },
+      {
+        text: 'Proficiency in Microsoft Office',
+        color: 'orange'
+      },
+      {
+        text: 'Experience with both Agile and Waterfall methodologies',
+        color: 'green lighten-1'
+      },
+      {
+        text: 'Excellent problem solver',
+        color: 'yellow darken-1'
+      }
     ]
   })
 }

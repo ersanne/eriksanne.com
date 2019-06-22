@@ -23,7 +23,7 @@
                 :class="`font-weight-regular ${item.color}--text text--${item.dark} pb-3`"
                 v-text="item.grade">
               </span>
-              <br>
+              <br v-if="item.grade">
               <span :class="`font-weight-regular ${item.color}--text text--${item.dark} pb-2`"
                     v-text="`${item.institution}, ${item.location}`">
               </span>
@@ -55,6 +55,15 @@ export default {
         text: 'A wide variety of modules covering the analysis, design, development, testing, evaluation and' +
           ' modification of reliable, maintainable and high-quality software including real-time, mobile and' +
           ' large-scale enterprise systems.'
+      },
+      {
+        color: 'blue',
+        dark: 'darken-1',
+        date: '2014 - 2016',
+        title: 'A-Levels',
+        institution: 'Boston College',
+        location: 'Boston, UK',
+        text: 'A-Levels in Math\'s, Further Math\'s and Economics. IELTS (Academic) 8 '
       }
     ]
   })
