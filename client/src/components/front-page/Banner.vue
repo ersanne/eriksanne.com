@@ -1,6 +1,6 @@
 <template>
     <v-parallax
-            src="https://i.imgur.com/HSv30Lc.jpg"
+            src="banner.jpg"
     >
         <v-layout
                 align-center
