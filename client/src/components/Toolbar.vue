@@ -57,4 +57,14 @@ export default {
 <style lang="stylus" module>
 .title
   text-decoration: none
+@media only screen and (min-width: 370px) {
+  .hidden-369-and-down {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 369px) {
+  .hidden-370-and-up {
+    display: none !important;
+  }
+}
 </style>
