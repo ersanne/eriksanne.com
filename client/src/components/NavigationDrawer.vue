@@ -16,6 +16,10 @@
       >
         <v-list-tile-content>{{ link.text }}</v-list-tile-content>
       </v-list-tile>
+      <a href="/CV_ErikSanne.pdf"
+         :class="$style.title">
+        <v-btn round color="primary">Download CV</v-btn>
+      </a>
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -50,5 +54,6 @@ export default {
 </script>
 
 <style lang="stylus" module>
-
+.title
+  text-decoration: none
 </style>

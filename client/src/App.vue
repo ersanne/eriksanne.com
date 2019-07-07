@@ -2,10 +2,11 @@
   <v-app>
     <NavigationDrawer/>
     <Toolbar/>
-    <v-content>
+    <v-content style="padding-bottom: 80px">
       <router-view></router-view>
     </v-content>
-    <Footer/>
+    <button-go-top></button-go-top>
+    <Footer></Footer>
   </v-app>
 </template>
 
@@ -16,11 +17,17 @@ import scrollSpyMixin from './scrollSpyMixin'
 import goTo from 'vuetify/es5/components/Vuetify/goTo'
 import NavigationDrawer from './components/NavigationDrawer'
 import Toolbar from './components/Toolbar'
+import ButtonGoTop from './components/front-page/ButtonGoTop'
 import Footer from './components/Footer'
 
 export default {
   name: 'App',
-  components: { Footer, Toolbar, NavigationDrawer },
+  components: {
+    NavigationDrawer,
+    Toolbar,
+    ButtonGoTop,
+    Footer
+  },
   computed: mapState([
     'links',
     'activeIndex'

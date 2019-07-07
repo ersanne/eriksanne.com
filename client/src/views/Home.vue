@@ -7,7 +7,6 @@
     <experience></experience>
     <education></education>
     <contact></contact>
-    <button-go-top></button-go-top>
   </div>
 </template>
 
@@ -18,7 +17,6 @@ import Banner from '../components/front-page/Banner'
 import AboutMe from '../components/front-page/AboutMe'
 import Contact from '../components/front-page/Contact'
 import Skills from '../components/front-page/Skills'
-import ButtonGoTop from '../components/front-page/ButtonGoTop'
 import Education from '../components/front-page/Education'
 import Languages from '../components/front-page/Languages'
 
@@ -26,7 +24,6 @@ export default {
   components: {
     Languages,
     Education,
-    ButtonGoTop,
     Skills,
     Contact,
     AboutMe,
