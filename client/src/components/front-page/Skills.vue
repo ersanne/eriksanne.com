@@ -70,7 +70,7 @@ export default {
           icon: 'mdi-docker',
           text: 'Docker',
           value: 25,
-          level_text: 'Intermediate',
+          level_text: 'Beginner',
           color: 'blue lighten-2'
         }
       ],

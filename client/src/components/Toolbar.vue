@@ -30,7 +30,7 @@
       </v-btn>
     </v-toolbar-items>
     <div class="hidden-sm-and-down">
-      <a href="/CV_ErikSanne.pdf"
+      <a href="/ErikSanne_CV.docx"
          :class="$style.title">
         <v-btn round color="primary">Download CV</v-btn>
       </a>

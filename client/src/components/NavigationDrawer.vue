@@ -2,6 +2,7 @@
   <v-navigation-drawer
     v-model="drawer"
     temporary
+    floating
     app>
     <v-list>
       <v-list-tile
@@ -16,7 +17,7 @@
       >
         <v-list-tile-content>{{ link.text }}</v-list-tile-content>
       </v-list-tile>
-      <a href="/CV_ErikSanne.pdf"
+      <a href="/ErikSanne_CV.docx"
          :class="$style.title">
         <v-btn round color="primary">Download CV</v-btn>
       </a>
