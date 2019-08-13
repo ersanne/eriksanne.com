@@ -14,7 +14,6 @@ services:
       - ./.config/ssl.conf:/config/nginx/ssl.conf
     depends_on:
       - portfolio-website
-      - admin-dashboard
     networks:
       - frontend
     environment:
@@ -46,17 +45,6 @@ services:
       - frontend
     environment:
       - PORT=8080
-      - NODE_ENV=production
-
-  admin-dashboard:
-    container_name: admin-dashboard
-    build: ./admin
-    expose:
-      - "8081"
-    networks:
-      - frontend
-    environment:
-      - PORT=8081
       - NODE_ENV=production
 
 networks:
