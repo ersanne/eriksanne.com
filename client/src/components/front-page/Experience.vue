@@ -37,31 +37,55 @@ export default {
   data () {
     return {
       items: [
-        { title: 'Business Anlyst Intern',
+        {
+          title: 'Business Analyst Intern',
           company: 'MarketAxess',
           location: 'London, UK',
           date: 'Jun 2019 - Aug 2019',
-          text: 'Produced high level and detailed business specifications. ' +
-                  'Gained a detailed understanding of the MarketAxess trading platform. ' +
-                  'Participated in Scrum as a product owner and prioritized work items for developers. ' },
-        { title: 'Technology Anayst - Industrial Placement',
+          text: 'Summer internship based at an international financial technology company. \n' +
+              '<ul>' +
+              '<li>Gained a thorough understanding of the MarketAxess trading platform</li>' +
+              '<li>Production of detailed business specifications for enhancements on the trading system, with new features to meet client requirements</li>' +
+              '<li>Liaising with internal stakeholders such as Product Managers to discuss client needs</li>' +
+              '<li>Participation in Scrum as Product Owner</li>' +
+              '<li>Prioritizing enhancements such as bug fixes and work items for software developers</li>' +
+              '<li>Analysing and modelling of financial data</li>'
+        },
+        {
+          title: 'Industrial Placement - Application Developer',
           company: 'Morgan Stanley',
           location: 'Glasgow, UK',
           date: 'Jun 2018 - May 2019',
-          text: '12 months split across Equity Swaps Trading and Morgan Stanley Developer Environment teams. ' +
-                  'Performance tuned Java and SQL components on a market leading trading system. ' +
-                  'Migrated and enhanced a client feature from Perl scripts to a Java Spring Boot application. ' +
-                  'Full stack software development with Java Spring Boot, Python and JS + Angular 6' },
+          text: '12 Months split between Equity Swaps Trading and Morgan Stanley Development Environment teams<br><br>' +
+              '<b>Equity Swaps Trading</b><br>' +
+              '<ul>' +
+              '<li>Conducted Business Analysis using Waterfall and Agile methodologies</li>' +
+              '<li>Developed features for a market-leading trading system – performance tuning using Java and SQL</li>' +
+              '<li>Led migration and enhancement of a client feature from Perl to Java</li>' +
+              '<li>Database development, experiencing the full Software Development Lifecycle</li>' +
+              '<li>Effectively used technologies such as Java, Bash, Spring Boot, Ant-build, Ivy, Gradle, DB2, Sybase, Unix</li>' +
+              '<li>Demonstrated excellent oral presentation skills at Morgan Stanley Campus Recruitment events, speaking to groups of 30-50 people to promote their internship opportunities</li>' +
+              '<li>Collaborating across software teams and departments to build a successful product</li>' +
+              '</ul>' +
+              '<br><b>MSDE – Morgan Stanley Development Environment</b>' +
+              '<ul>' +
+              '<li>Created a project from scratch, demonstrating high levels of autonomy and responsibility</li>' +
+              '<li>Used SCRUM Agile methodology to ensure meticulous and efficient completion of projects</li>' +
+              '<li>Full-stack software development using secure processes to ensure integrity</li>' +
+              '<li>Software configuration management</li>' +
+              '<li>Used Java, Spring Boot, Gradle, Python, JS + Angular 6</li>' +
+              '</ul>' },
         { title: 'Product Specialist - Online Fraud Prevention',
           company: 'Sykes Global Services',
           location: 'Edinburgh, UK',
           date: 'May 2017 - May 2018',
-          text: '' +
-            '<ul><li>Understanding client’s needs and what actions are necessary to carry out' +
-            ' requests successfully</li>' +
-            '<li>Reviewing customer transactions to identify suspicious activity/fraud</li>' +
-            '<li>Analysing trends</li>' +
-            '<li>Gathering evidence</li></ul>' }
+          text: '<ul>' +
+              '<li>Monitoring of customer transactions to identify suspicious activity including possible fraud</li>' +
+              '<li>Demonstrating a strong understanding of client requirements, identifying and implementing appropriate actions to complete requests successfully</li>' +
+              '<li>Using data to analyse trends, presenting any inefficiency to stakeholder in order to reduce future workloads</li>' +
+              '<li>Gathering evidence for customer audits, in accordance with strict GDPR procedures</li>' +
+              '<li>tReporting any suspected fraudulent activity in a timely manner, in compliance with company policies and procedures</li>' +
+              '</ul>' }
       ]
     }
   }
