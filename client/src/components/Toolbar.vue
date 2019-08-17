@@ -29,12 +29,13 @@
         v-text="link.text">
       </v-btn>
     </v-toolbar-items>
-    <div class="hidden-sm-and-down">
-      <a href="/ErikSanne_CV.docx"
-         :class="$style.title">
-        <v-btn round color="primary">Download CV</v-btn>
-      </a>
-    </div>
+    <a href="/ErikSanne_CV.docx"
+       :class="$style.title">
+      <v-btn round color="primary" class="ma-2">
+        CV
+        <v-icon small>mdi-download</v-icon>
+      </v-btn>
+    </a>
   </v-toolbar>
 </template>
 
