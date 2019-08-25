@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import SectionLayout from '../../views/SectionLayout';
+import SectionLayout from '../../views/SectionLayout'
 export default {
   components: { SectionLayout },
   data: () => ({
